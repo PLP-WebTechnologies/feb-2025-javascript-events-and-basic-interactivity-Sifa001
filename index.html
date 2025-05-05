@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Playground</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>JavaScript Playground</h1>
+    
+    <!-- Event Handling Section -->
+    <section>
+        <h2>Event Handling</h2>
+        
+        <button id="colorChanger" class="btn">Click Me!</button>
+        
+        <div class="hover-box">
+            <p>Hover over me to change my background-color</p>
+        </div>
+    </section>
+    
+    <!-- Interactive Elements Section -->
+    <section>
+        <h2>Interactive Elements </h2>
+        
+        <!-- Slideshow -->
+        <div class="slideshow">
+            <img src="https://picsum.photos/id/10/800/300" class="slide active" alt="Nature 1">
+            <img src="https://picsum.photos/id/11/800/300" class="slide" alt="Nature 2">
+            <img src="https://picsum.photos/id/12/800/300" class="slide" alt="Nature 3">
+        </div>
+        <div class="slide-controls">
+            <button id="prevBtn" class="btn">Previous</button>
+            <button id="nextBtn" class="btn">Next</button>
+        </div>
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+            <button class="tab-btn" data-tab="tab2">Tab 2</button>
+            <button class="tab-btn" data-tab="tab3">Tab 3</button>
+        </div>
+        
+        <div class="tab-content active" id="tab1">
+            <h3>Tab 1</h3>
+            <p>This is the first tab's content. Double click anywhere in this box!</p>
+        </div>
+        
+        <div class="tab-content" id="tab2">
+            <h3> Tab 2</h3>
+            <p>Second tab content goes here.</p>
+        </div>
+        
+        <div class="tab-content" id="tab3">
+            <h3>Tab 3</h3>
+            <p>Third tab content goes here.</p>
+        </div>
+    </section>
+    
+    <!-- Form Validation Section -->
+    <section>
+        <h2>Form Validation</h2>
+        
+        <form id="myForm">
+            <div class="form-group">
+                <label for="username">Username (required)</label>
+                <input type="text" id="username" required>
+                <div class="error" id="usernameError">Username is required</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <div class="error" id="emailError">Please enter a valid email</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password (min 8 characters)</label>
+                <input type="password" id="password" minlength="8">
+                <div class="error" id="passwordError">Password must be at least 8 characters</div>
+                <div id="passwordStrength">
+                    <div id="strengthBar"></div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+    
+    <!-- Secret Area (hidden until discovered) -->
+    <div id="secretArea"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
